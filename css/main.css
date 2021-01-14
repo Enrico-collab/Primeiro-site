@@ -1,0 +1,476 @@
+/* Referenciando os elementos do html para estilizar no css */
+
+/* 1ºPARTE DO MEU SITE */
+/* Referenciando minha tag "body" e estilizando a altura e a largura */
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto; /*Aqui serve pra tirar a barra horizontal que fica no site.*/
+}
+
+
+/* Referenciando minha classe "menu-principal" e estilizando a primeira parte do header (header1) */
+.menu-principal {
+    width: 100%; /* O menu principal tem sempre que ter 100% da tela, por isso poremos uma largura de 100% */
+    background-color: black; /* pondo cor de fundo de preto na minha primeira parte do header */
+    height: 65px; /*  pondo a altura do meu header1 ( a parte do logo e das redes sociais ) */
+}  
+
+
+/* Referenciando minha tag "main" e estilizando o mesmo. */
+/* Quando eu cheguei na 4º parte do meu site, eu precisei criar uma <div e dentro dela outra <div chamada classe "content texto-destaque" 
+   para suportar o próximo conteúdo do meu site que foi inserir uns textos/titulos e paragrafos.
+   Para estilizar o dito acima, como eu já defini que eu preciso de uma gride de 980px em cada parte do meu site e
+   já foi definido anteriormante no main, um widht de 980px ( que é o que eu preciso e que é o "width" abaixo ) eu vou simplesmente acrescentar
+   no meu main, a minha classe="content" que foi criada no index.html. Eu faço isso pondo um virgula depois do main e
+   acrescentando a minha classe com um ponto (.) e o nome da minha classe. */
+main, .content {
+    margin: 0 auto; /*Pondo meu logo um pouco mais pra esquerda. ( olhando do centro )*/
+    width: 980px; /* temos uma area que ocupa 100% do site e outra que possui 980px ou seja, foi um erro temos colocado 980px aqui, fiz errado, pra consertar isso, irei criar uma classe no main, pra poder estilizar ela aqui no css. */
+    position: relative;
+}
+
+
+/*HEADER1*/
+/* Referenciando a classe "logo" e vamos atribuir um estilo pra ela. */
+.logo{
+    float: left; /* Serve para por os 4 icones das redes sociais dentro do "menu-principal" junto com o "logo" do outro lado. Serve para ter una flutuação a esquerda da tela.*/
+    padding: 0px; /* pondo o meu logo um pouco mais centralizado dentro do meu header1. */
+    width: 80%;
+}
+
+
+/* Referenciando a classe ".redes-sociais ul li" e estilizando suas linhas e colunas. Abaixo é aonde vão os icones das redes sociais. Primeira parte ainda ( header1). */
+.redes-sociais ul li {
+    margin-left: 22px; /* Colocando espaço entre os meus icones das redes sociais. */
+    margin-top: 25px;
+    display: inline-block; /* "display: inline-blcok" = Serve para deixar os icones das redes sociais um do lado outro, e não um embaixo do outro. */
+    float: left; /* Serve para tirar as 3 bolinhas ( linha de marcação ) que tinham ao lado das fotos dos icones das minhas redes sociais especificas. */
+}
+
+/*  2º PARTE DO MEU SITE */
+/*HEADER-2*/
+/* Referenciando a classe "header2" e estilizando ela. */
+.header-2 {
+    background-color: blanchedalmond; /*Pondo a cor de fundo do meu menu ( home, page, blog.. ) de branco.*/
+    width: 980px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+
+/*Referenciando a "classe menu ul li" e estilizando suas linhas e colunas ( home,about us, blog.. )*/
+.menu ul li {
+    display: inline-block; /*Serve para deixar o menu ( home, about us, blog..) um do ladro do outro, em linha, e não um embaixo do outro.*/ 
+    margin-left: 30px; /* Aumentando o espaçamento entre os textos do meu menu. */
+}
+
+
+/*Referenciando denovo a "classe menu ul li" e estilizando a tag "a". */
+.menu ul li a {
+    color: steelblue; /* Definindo a cor de texto da minha tag "a", que no caso aqui são os textos ( home, about us, blog..)*/
+    text-decoration: none; /* Tirando uma linha horizontal (sublinhado) que tinha embaixo dos meu textos. */
+    font-size: 18px; /*Aumentando o tamanho do texto do meu texto no menu. */
+    text-transform: uppercase; /* Deixando os textos do meu menu tudo em maiúsculo. */
+}
+
+
+/* Referenciando a classe "menu" denovo e estabelecendo seu tamanho.*/ 
+.menu {
+    width: 70%;
+    float: left;
+}
+
+
+/*Refernciando a classe busca e estilizando ela. ( Estilizando a barrinha da lupa de procura, onde as pessoas fazem uma pesquisa no site. */
+.busca {
+    width: 19%;
+    float: right;
+    margin-top: 8px;
+    height: 36px;
+}
+
+
+/*Referenciando a coluna-100 e consertando o tamanho para 100% da minha coluna  ("menu: page, about us, etc..").*/
+.coluna-100 {
+    width: 100%; /*Consertando o tamanho para 100% do meu erro que fiz.*/
+    height: 74%;  
+    float: left;
+    position: relative; /*O elemento é posicionado em relação a sua posição normal, entao: left: 20px adiciona 20 pixels à posição ESQUERDA do elemento. Resumindo, fez com que a parte do meu menu (home, about us, ) ficasse mais pra esquerda da tela, pois antes estava mais centralizado.*/
+}
+
+
+/*Bom ate agora o que eu fiz foi fazer no header os menu. A primeira parte do menu ( header1 ) onde eu pus o logo Tuff gong e os icones
+  das redes sociais. E depois a segunda parte do meu menu ( header2) que seria a parte onde vai escrito ( home, about us, page, etc.. ).
+  Tudo certo, porém no momento o meu menu ( home,page,..) esta um pouco à frente do meu header1 ( o logo "tuff-gong" ). 
+  Eu quero que esse menu fique exatamente embaixo do meu logo, para isso terei que fazer um reset na tag "ul" do meu header2 ( menu:home,page..). */
+
+/* Referenciando a tag ul e fazendo um reset*/
+ul {
+    padding: 0px!important; /* Resetando e definindo ela como importante pra ele poder sobescrever essa propriedade do navegador ( google chrome ).*/
+}
+
+
+/*Bom agora que eu ja pus meu menu (header2) embaixo no menu (header1), eu preciso definir a borda do meu "main" inteiro ( Dentro do "main" esta o meu menu branco com os textos do menu: (page,home..). 
+  Pra isso eu defini uma classe pro meu main ( lembrando que eu meu main ja esta criado, eu apenas vou defini-lo essa minha classe como o menu principal, menu esse onde vai os ( home, page.. ). */   
+/*Referenciando minha classe menu:home, page.. da tag main */
+.menu-urls {
+    border-bottom: 3px solid lavenderblush; /*Colocando uma borda bem pequena na parte inferior do meu menu e colocando uma cor tambem.*/
+    height: 70px; /*Definindo a altura do meu menu ( home, about us..) */ 
+}
+
+
+/*Referenciando o meu input que esta dentro do busca para estilizar ele. */
+.busca input {
+    height: 36px;
+    padding: 10px;
+    width: 168px;
+    background-image: url('../img/lupa.png'); /*Inserindo uma imagem no css pela primeira vez. Inserindo a lupa atraves da referencia "input" da classe "busca"*/
+    /*Ao inserir a imagem da lupa acima, ira aparecer varias lupinhas dentro do meu "search", pra arruma isso, deixar apenas uma lupa, eu preciso dizer que a imagem não pode se repetir. Pra isso eu uso a seguinte propriedade abaixo:*/
+    background-repeat: no-repeat;
+    /*Feito isso, eu preciso ajeitar a posição da minha lupa. Eu quero que a lupa fique a direita dentro da minha barra de pesquisa. Farei isso atraves da propriedade abaixo:*/
+    background-position: 96%;
+    border: 1px solid black; /*Adicionando uma borda na minha barrinha de pesquisa "search". */
+}
+
+
+/*Agora irei acrescentar uma cor nos nomes do menu ( home, page.. ) e embaixo dos nomes também, irei acrescentar uma borda embaixo dos nomes, onde ao passar o mouse por cima, a cor apareça no nome e embaixo do nome.*/
+/*Porem como as palavras do meu menu ( home, page..) já esta definida com a cor preta, para eu fazer isso citado acima, eu terei que usar o elemento "hover".*/
+/*Lembrando que eu preciso mudar a cor do meu elemento "a", e não do "li" nem do "lu", por isso especificamos na referencia abaixo o "a":hover. */
+/* "hover": corresponde quando o usuário designa um elemento com um dispositivo apontador, mas não necessariamente o ativa, ou seja, passarei o mouse em cima, a cor irá mudar, porem ele não será selecionado, só se eu clicar com o mouse, obvio neh enrico kkk*/
+/* Abaixo eu apenas coloquei o nome das palavras que estao no menu ( home, page..), de preto. */
+.menu ul li a:hover {
+    color: rgb(150, 155, 216); 
+    
+}
+
+/* Agora aqui eu acrescentei a borda embaixo das palavras que estao no menu ( home, page.. ), de preto */
+.menu ul li:hover {
+    border-bottom: 2px solid rgb(150, 155, 216); /*Acrescetando a borda, definindo tamanho e cor.*/
+    height: 55px; /*Definindo altura da minha borda.*/
+}
+
+
+/* 3º PARTE DO MEU SITE */
+/* Bom agora ja está feito os menus. O primeiro menu, header1, com o logo e os icones das redes sociais e o segundo menu, header2, com os menus:home, page, about us..,
+   e estilizei os mesmo e seu elementos.
+   Agora vai começar a parte do JavaScript.
+   O proximo passo agora, será fazer no site, uns slides passando algumas fotos logo abaixo do meu menu. 
+   Isso foi feito no meu arquivo index.html ( peguei o slide do site especifico ). */
+
+
+/* Aqui estou referenciando minha classe "slick-prev" para poder estilizar meus botões do meu slider, que são os botões "next" e "previous". */
+/* Estilizando o botão da seta a esquerda ( previous ) */
+button.slick-prev {
+    font-size: 1;
+    border: none;
+    height: 50px;
+    width: 25px;
+    z-index: 9;
+    background-color: transparent;
+    background-image: url(../img/seta-esquerda.png);
+    position: absolute;
+    top: 44%;
+    left: 330;
+}
+
+/* Estilizando o botão da seta a direita ( next ). */
+button.slick-next {
+    font-size: 1;
+    border: none;
+    height: 51px;
+    width: 25px;
+    z-index: 9;
+    background-color: transparent;
+    background-image: url(../img/seta-direita.png);
+    position: absolute;
+    top: 44%;
+    right: 330;
+}
+
+.slick-list {
+    width: 100%!important;
+}
+
+.slick-initialized {
+    overflow: hidden;
+}
+
+
+
+/* Estilizando meus dots. Meus botoezinhos que indicam qual foto do slide a pessoa esta. */
+/* Bom, no meu slick slide ( que não foi o código que eu escrevi nesse projeto, e sim o código que
+   esta dentro do meu arquivo de onde eu peguei os meus slides, eu encontro ele apertando f12/inspecionando
+   meu site lá na web ) vai ter uma classe que vai ser ativo "active" e uma outra classe pros outros normais, ou seja
+   quando uma foto esta selecionada, um dos meus dots, vai esta ativo, indicando aquela foto, e os outros vao estar
+   normais, conforme vou mudando de foto, meus dots vao mudando junto comigo.
+   Pra fazer isso, eu pegarei o slick-dots (que está dentro do meu arquivo slick-slide).
+   O slick-dots, ele é uma lista ou seja ele é uma "ul" e dentro dela eu tenho varios "li" e dentro dela eu tenho button.
+   Vou referenciar meus "button" que estão dentro da "li" que estão dentro do "ul" que estão dentro meu slick-dots e vou começar a estiliza-lo. */
+/* Referenciando meu button para estiliza-los. Abaixo eu aonde eu faço para deixar eles dentro do meu slide, dentro da minha foto do slide. */
+.slick-dots li button {
+    font-size: 0px;
+    border: 3px solid  white;
+    width: 21px;
+    height: 21px;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* Abaixo vou por os meus botoes para o centro da tela. Para isso preciso referenciar o "slick-dots" apenas. */
+.slick-dots {
+    margin: 0 auto;
+    width: 50%;
+    position: absolute;
+    left: 46%;
+    top: 94%;
+}
+
+
+/* Referenciando e atribuindo uma cor de background para o botão para a hora que ele estiver ativo. Ativando o "active".*/
+/* Como o "slick-active" é "li" ou seja, é uma classe active dentro de "li", eu vou pegar o "li" que tem a classe "active"
+   e dentro dessa classe vou estilizar meu "button".*/
+li.slick-active button {
+    background: #00bac6;
+}
+
+
+/* Abaixo eu vou apenas por um botao (dot) do lado do outro. Perceba que meu botao esta dentro da "li", portanto como eu quero
+por os 3 botões um do lado do outro, eu tenho que referenciar minha "li" apenas.  */
+.slick-dots li {
+    display: inline-block;
+    padding-left: 10px; /* Aqui estou distanciando um pouco os botoes, pra eles nao ficarem todos juntos, um do ladro do outro, e sim com um espaço entre eles.*/
+}
+
+/* 4º PARTE DO MEU SITE */
+/* Referenciando e estilizando todo o meu texto/titulo e parágrafo. */
+.texto-destaque {
+    text-align: center; /* Centralizando o meu texto/titulo e paragrafo*/
+}
+
+/* Referenciando e estilizando apenas o meu <strong>. */
+.texto-destaque strong {
+    color: darkmagenta;
+}
+
+/*Referenciando e estilizando apenas o meu texto/titulo "<h1>" */
+.texto-destaque h1 {
+    text-transform: uppercase; /* Pondo todas as letras em maiúsculas.*/
+    font-size: 30px;
+    color: blueviolet;
+}
+
+/* Referenciando e estilizando apenas o meu parágrafo "<p>" que esta dentro da classe="content texto-destaque. */
+.texto-destaque p {
+    font-size: 15px;
+    color: darkslategray;
+}
+
+.texto-destaque strong {
+    color: black;
+}
+
+/* Referenciando minha "coluna-3" para poder por minhas imagens acima uma do lado da outra.
+   Uma imagem ficará no canto esquerdo, otra no meio porém mais abaixo comparado ao da esquerda
+   e da direita, e uma imagem no canto direito, igual a primeira imagem do canto esquerdo. */
+.coluna-3 {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 29%;
+    float: left;
+    position: relative;
+    color: darkmagenta;
+}
+/* Referenciando minha classe ".lapis-texto e estilizando ela. */
+/* Essa é aquela imagem do meio que ficará um pouco abaixo comparada as imagens da esquerda e da direita. */
+.lapis-texto {
+    margin-top: 86px;
+    
+}
+
+/* 5º PARTE DO MEU SITE */
+.bloco-imagem img {
+    margin: -9px auto;
+    width: 103%;
+    height: 54%;
+}
+
+
+.bloco-imagem {
+    height: 170px;
+    border: 2px solid #c5c5c5;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 8px; 
+    width: 200px;
+    font-size: 12px;
+}
+
+/* Referenciando minha classe .espaco-texto e estilizando ela. Abaixo estou dizendo para minhas fotos ficarem com um espaçamento
+   de margem do topo.  */
+   .espaco-texto {
+    margin-top: 3em;
+}
+
+
+
+.bloco-imagens-texto {
+    background-color: #eeebeb;
+    height: 79%;
+}
+
+
+.bloco-imagens-texto::before {
+    width: 100%;
+    display: inline-block;
+    content: '';
+    height: 49px;
+    background: white;
+    background-image: url('../img/setinha.png');
+    background-repeat: no-repeat;
+    background-position: 49%;
+    
+}
+
+.bloco-imagens-texto:after {
+    width: 100%;
+    display: inline-block;
+    content: '';
+    height: 49px;
+    background:white;
+} 
+
+/* 6º PARTE DO MEU SITE */
+/* Referenciando meu bloco-logo para definir a altura desse meu bloco */
+.bloco-logos {
+    height: 150px;
+}
+
+/* Referenciando minha coluna-4 e estilizando ela. */
+.coluna-4 {
+    float: left; /*Colocando as imagens do meus icones uma do lado da outra.*/;
+    width: 25%;
+}
+
+.coluna-4 img {
+    cursor: pointer; /*Serve para que ao passar o mouse em cima dos ícones, a cursor se torne uma mãozinha e não uma seta.*/
+    margin: 0 auto;
+    padding-top: 1em;
+}
+
+.coluna-4 img:hover {
+    margin-top: 10px!important; /* O important serve para alguma coisa lá do meu chrome, não sobrescrever essa minha definição feita.*/
+    position: relative!important;
+}
+
+/* 7º PARTE DO MEU SITE */
+/* Abaixo estou referenciando meu footer e estilizando ele. 
+   Quando eu inseri meus textos, eles ficaram no meio dos meus icones acima ( imagens das marcas ), irei por eles pra esquerda com o text align=left. */
+.footer h3 {
+    text-align: left;
+    margin: 9px;
+}
+
+
+/* A cor de fundo da 7º parte do meu site, não será uma cor e sim uma imagem. 
+   Referenciando o footer e inserindo a imagem. */
+.footer {
+    background-image: url('../img/footer.png');
+    color: #ffffff;
+    height: 375px;
+    padding-top: 22px;
+}  
+/* Referenciando meu .clock e adicionando uma cor na data. */
+.clock {
+    color: slategrey;
+}
+
+/* Referenciando meu <p>, meu clock, para estilizar ele. Como meu relóginho pequeno está antes do meu texto, ao referencia-lo
+   eu acrescento a palavra " before ", porque como eu disse, ele vai ants do meu texto, e é assim que se faz para referencia-lo. */
+.clock:before {
+     content: '';
+     width: 15px;
+     height: 15px;
+     padding-left: 3px;
+     display: inline-block;
+     background-image: url('../img/clock.png');
+     background-repeat: no-repeat;
+     
+     
+}
+
+/* Aqui estou referenciando todos os meus paragrafos de todas as colunas e definindo um padding pra eles e mudando o alinhamento do seu texto. */
+.coluna-4 p {
+    padding-right: 22px;
+    text-align: justify;   
+}
+
+/* Aqui estou referenciando minhas classes e inserindo a palavra before, pois como vou inserir 3 img de icones antes do texto, preciso usar a palavra before para estiliza-las. */
+/* Como são 3 classes la no meu arquivo html, pra eu não estilizar uma por uma, eu acrescendo todas elas numa mesma estilização usando a virgula e inserindo a classe seguinte. */
+/* Eu apenas precisarei fazer essas classes separadas, para por as fotos dos icones, pois são fotos diferentes uma das outras. */
+.location:before, .email:before, .telefone::before {
+    content: '';
+     width: 26px;
+     height: 19px;
+     display: inline-block;
+}
+
+/* Referenciando e inserindo a imagem ícone de localização. */
+.location:before {
+    background-image: url('../img/local.png');
+    background-repeat: no-repeat; /* Serve para a foto não ficar repetindo.*/   
+}
+
+/* Referenciando e inserindo imagem ícone do e-mail. */
+.email:before {
+    background-image: url('../img/email.png');
+    background-repeat: no-repeat;
+}
+
+/* Referenciando e inserindo a imagem ícone do telefone. */
+.telefone:before {
+    background-image: url('../img/telefoneico.png');
+    background-repeat: no-repeat;
+}
+
+/* 8º PARTE DO MEU SITE */
+/* A cor de fundo do meu "menu" não será uma cor e sim uma imagem. */
+
+/* Referenciando a minha classe footer.2 e vou inserir a minha imagem de fundo. */
+.footer-2 {
+    background-image: url('../img/footer2.png');
+    color: #c1c1c1; /* Mudando a cor das minhas letras. No caso aqui pondo a frase @copyright... em branco.*/
+    height: 68px; /*Definindo a altura do meu foote-2 ou seja, do meu bloco, aonde estão o copyright e os icones das redes socias.*/
+}
+
+/* Referenciando meu "footer-2 p" para estilizar somente o meu parágrafo desse bloco. No caso aqui meu copyright. */
+.footer-2 p {
+    padding: 10px;
+    padding-top: 10px;
+}
+
+.icones-socias ul {
+    margin-top: -21px;
+}
+
+.icones-socias ul li {
+    margin-left: 0px; /* Colocando espaço entre os meus icones das redes sociais. */
+    margin-top: -20px;
+    display: inline-block;
+    float: right;
+    padding-right: 37px;
+}
+
+.location {
+    color: slategrey;
+}
+
+.email {
+    color: slategrey;
+}
+
+.telefone {
+    color:slategrey;
+}

@@ -1,0 +1,392 @@
+<html>
+
+<head>
+    <!-- Referenciado meu arquivo main.css pro html reconhece-lo/saber que esse arquivo existe -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+    <!-- Referenciando o arquivo de JavaScript que eu peguei de um site especifico ( para poder fazer os slides ), pro html reconhece-lo, para eu poder estilizar minhas tags de JavaScript no Css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+
+    <!-- Titulo da minha página Web-->
+    <title>Meu Primeiro Site</title>
+
+</head>
+
+<body>
+    <!-- PRIMEIRA PARTE DO MEU SITE -->
+
+    <!-- Iniciando a primeira parte do header (header1) -->
+    <header class="menu-principal">
+
+        <!-- Criando o header do meu site. Serão duas partes: header1 e header2, onde header1 é onde vai meu logo e os icones das redes sociais especificas e o header2 é onde vai ser o meu menu principal ( home, about us, historia, etc) onde veremos mais pra frente essa parte do header2 -->
+        <!-- Pra isso vamos criar uma classe pra esse header. É importante atribuir uma classe a qualquer elemento que formos criar. -->
+        <!-- A classe serve pra podermos manipular o conteudo do html no css. -->
+        <!-- Depois usamos uma div, pra poder dividir em classes o meu conteúdo para melhor editar e estilizar no css.  -->
+        <!-- O main é a nossa tag principal. Ela vai englobar todo o conteúdo -->
+
+        <main>
+            <div class="header1">
+                <div class="logo">
+                    <img src="./img/tuff gong.png" /> <!-- Inserindo imagem pro meu logo na primeira parte do header-->
+                </div>
+
+
+                <!-- Criando outra div da primeira parte ainda -->
+                <div class="redes-sociais">
+                    <!-- Ali aonde vao os logotipos das redes socias, como ali é praticamente o menu, a gente precisa da tag chamada "ul" e depois usar a tag "li" -->
+                    <!-- "ul" = representa uma lista de itens desordenadas, isto é, uma coleção de itens que não trazem uma ordenação numérica e as suas posições, nessa lista, são irrelevantes -->
+                    <!-- "li" = é usado para representar um item que faz parte de uma lista. Este item deve estar contido em um elemento pai: uma lista ordenada ( <ol> ) ou uma lista desordenada ( <ul> ) -->
+                    <ul>
+                        <li>
+                            <a href="">
+                                <!-- Como eu vou por um logotipo da rede social especifica, ao clicar nesse logotipo, a pessoa tem que ser direcionada pra essa rede social especifica, nada mais nada menos do que um link ( href ), portanto, pra suportar este link, pomos a tag "<a" -->
+                                <img src="./img/linkeedin.png" </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/twitter.png" </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/face.png" </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/instagram.png" </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </main>
+    </header>
+
+    <!-- SEGUNDA PARTE DO MEU SITE -->
+    <!-- Iniciando a segunda parte do header ( header2 ) -->
+
+    <main class="coluna-100 menu-urls">
+        <!-- criei essa classe para poder consertar e estilizar no css, a area ( coluna, a parte dos menu:home,about us, etc ) que ocupa 100% do meu site ( fiz errado, comentei no arquivo main.css sobre isso ).-->
+        <div class="header-2">
+            <!-- Criando uma classe pra minha segunda parte do site ( os menus ( header2) ) -->
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="">About Us</a>
+                    </li>
+
+                    <li>
+                        <a href="">Service</a>
+                    </li>
+
+                    <li>
+                        <a href="">Page</a>
+                    </li>
+
+                    <li>
+                        <a href="">Blog</a>
+                    </li>
+
+                    <li>
+                        <a href="">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Criando uma classe para a nossa "busca" ou seja, aonde as pessoas vão fazer uma busca no meu site ( search ) -->
+            <div class="busca">
+                <input placeholder="Search Something" type="text">
+                <!-- Inserindo o quadradinho do tipo texto da minha barra de "busca" ( aquele quadradinho da lupa, quando vamos procurar algo em um site ) e atribuindo atraves do "placeholder" um texto padrão dentro da nossa barrinha de pesquisa. -->
+            </div>
+        </div>
+    </main>
+    <!-- TERCEIRA PARTE DO MEU SITE -->
+
+    <!-- Bom agora ja está feito os menus !! O primeiro menu, header1, com o logo e os icones das redes sociais
+                     e o segundo menu, header2, com os menus:home, page, about us.., e estilizei os mesmo e seus elementos.
+                
+                     Agora vai começar a parte do JavaScript.
+                     O proximo passo agora, será fazer no site, uns slides passando algumas fotos logo abaixo do meu menu.
+             
+                     Pra fazer isso, eu irei pegar uma biblioteca pronta, ou seja, uns slides já prontos dentro de uns arquivos com os seus respectivos códigos.              
+                     Eu irei pegar da internet, de um site especifico, portanto eu terei que linkar a url do site que eu peguei para o meu 
+                     projeto aqui. Farei isso usando as tags "<script type="..." src=".." ". -->
+
+    <!-- Eu preciso também criar uma <div> e dentro dela, outras <div> com conteúdo, que no caso serão aonde colocarei as minhas fotos dos slides -->
+    <!-- Criando a <div> citada na linha acima, com a classe nomeada de "coluna-100", pq eu quero que esses slides fiquem 100% da minha página.  -->
+    <!-- Como eu nomiei lá em cima no <main> uma classe nomeada de  "coluna-100 menu.urls", para que meu menu ficasse 100%, 
+                     farei a mesma coisa na <div class criada abaixo, nomeando ela para "coluna-100", para que eu possa inserir as imagens dos meus slides e 
+                     também refencia-las no meu main.css -->
+
+    <!-- Criei uma <div> e defini uma classe pro meus slides.-->
+    <div class="coluna-100">
+        <!-- Criei uma <div> dentro da <div class="coluna-100> para adicionar as imagens dos slides" -->
+        <div class="slider-principal">
+            <!-- Inserindo as imagens que vao correr no meu slide -->
+            <img src="./img/foto slide7.jpg" />
+            <img src="./img/foto slide1.jpg" />
+            <img src="./img/foto slide5.jpg" />
+
+            <!--Bom, inserindo as imagens acima, ela carregou no meu site porém ficou uma embaixo da outra. 
+                                    Para mudar isso e fazer com que os slides funcionem, eu precisei ir na documentação do site
+                                    que eu peguei os slides e ver o código que eles disponibilizaram, de como esse código
+                                    ele deve ser aplicado.
+                                    Então eu entrei no site, procurei pelo modelo que eu peguei ( que foi o modelo simples )
+                                    copiei o código que eles disponibilizaram e apliquei esse código dentro do meu arquivo main.js -->
+        </div>
+    </div>
+
+    <!-- QUARTA PARTE DO MEU SITE -->
+    <!-- Bom, a <main que a gente criou anteriormente, ela tem uma gride de 980px, exatamente o que a gente precisa
+             pra fazer essa quarta parte, que será um texto/titulo grande dizendo algo.
+             Pra isso, eu venho aqui no meu index.html e crio outra <div para poder suportar o nosso conteúdo.
+             Bom, lembre-se que lá em cima, criamos uma <div class="coluna-100, então sempre que tiver uma outra parte 
+             a gente vai colocar essa <div class="coluna-100" e dentro dela vamos ter uma outra <div que vai ter uma classe="content texto-destaque"
+             e dentro dela vamos inserir o texto/titulo através da tag "<h1>" e uns parágrafos através da tag "<p>".-->
+
+    <div class="coluna-100">
+
+        <div class="content texto-destaque">
+            <h1><strong>Tuff Gong -</strong> Gravações, Ensaios e Vídeos</h1>
+            <p>Desde 1970 de tradição no meio musical, Tuff Gong estúdio oferece um serviço de extrema qualidade e
+                preços acessíveis.
+                Localizado em Trenchtown - Jamaica, o lendário estúdio conta com três salas para ensaios e gravações
+                cuidadosamente
+                tratadas com materiais acústicos de primeira qualidade.</p>
+
+            <!-- Abaixo eu criei mais três <div dentro da minha <div "texto-destaque" que esta dentro da minha <div "coluna-100" e
+             dentro de cada uma <div nova abaixo irei inserir imagens e textos, paragrafos, subtitulus, titulos para a conclusão 
+             da 4º parte do meu site. -->
+
+            <!-- Antes essa divisão estava escrito apenas "coluna-3", conforme fui avançando e fiz
+            meu texto, paragrafo e inserir as imagens da parte 4 do meu site ( que é essa parte que estamos)
+            eu precisei criar uma classe de nome "espaco-texto" para poder dar um espaçamento entre meu texto e paragrafos, 
+            das minhas imagens, lá no meu arquivo css. Criei essa classe na classe "coluna-3" como voce pode ver, que agora
+            se tornou uma classe="coluna-3espaco-texto e vou referencia-la no meu arquivo css". -->
+            <div class="coluna-3 espaco-texto">
+                <img src="./img/computador.png" />
+                <h3><strong>Gravações:</strong> Alta Qualidade </h3>
+                <p>Suas gravações são realizadas com métodos digitais e semi-analógicos, utilizando os softwares e
+                    plugins mais modernos da atualidade.</p>
+            </div>
+            <div class="coluna-3 lapis-texto">
+                <!-- Aqui eu defini uma classe com um nome diferente das outras, pois a imagem do meio eu quero ela um pouco abaixo das outras, e pra isso, terei que estilizar ela separa, então eu defini um nome difenrente pra ela, pra pode-la referencia-la no meu css e estilizar ela separada das outras imagens.;-->
+                <img src="./img/lapis.png" />
+                <h3><strong>Ensaios:</strong> Equipamentos Modernos</h3>
+                <p> Tuff Gong oferece aos seus clientes excelentes equipamentos, como microfones, sistema de PA,
+                    amplificadores, bateria e mesa de som.</p>
+
+            </div>
+            <div class="coluna-3 espaco-texto">
+                <img src="./img/paisagem.png" />
+                <h3><strong>Vídeos:</strong>Full HD </h3>
+                <p>Grave clipes e takes em Full HD. Tuff Gong Studios é também uma produtora e selo de gravação focado
+                    no mercado independente.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 5º PARTE DO MEU SITE -->
+    <!-- Irei inserir umas 6 fotos com textos abaixo delas.-->
+    <!-- Vou precisar novamente de 980px para fazer essa parte, portanto usarei a classe="coluna-100" novamente e 
+        acrescentarei mais "<div's" -->
+
+    <!-- Criando uma div "bloco-imagens-texto". Será o bloco aonde irá ficar meu conteúdo abaixo. Esse bloco será de fundo cor cinza.  -->
+    <div class="coluna-100 bloco-imagens-texto">
+        <!-- Criei a classe "content", dentro da classe "bloco-imagens-texto", pois é dentro dela que ficarão minhas fotos com os textos.-->
+        <div class="content" style="margin-left: 25%; margin-top: -1%; float:left" ;>
+
+            <div class="coluna-3 espaco-texto bloco-imagem">
+                <img src="./img/baterias.jpg">
+                <p><b>Aulas de bateria</b></p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting of the industry.
+                    Lorem Ipsum has been the and bomb atomic
+                </p>
+            </div>
+            <div class="coluna-3 espaco-texto bloco-imagem">
+                <img src="./img/mesa estudio.jpg">
+                <p><b>Seja um produtor</b></p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting of the industry.
+                    Lorem Ipsum has been the and bomb atomic
+                </p>
+            </div>
+            <div class="coluna-3 espaco-texto bloco-imagem">
+                <img src="./img/contrabaixo.jpg">
+                <p><b>Aulas de contrabaixo</b></p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting of the industry.
+                    Lorem Ipsum has been the and bomb atomic
+                </p>
+            </div>
+        </div>
+        <div class="content" style="margin-left: 25%; float: left; top: -22px;">
+            <div class="coluna-3 espaco-texto bloco-imagem">
+                <img src="./img/country violao.jpg">
+                <p><b>Faça seu clipe</b></p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting of the
+                    industry. Lorem
+                    Ipsum has been
+                    the and scrambled it.
+                    atype specimen
+                </p>
+            </div>
+            <div class="coluna-3 espaco-texto bloco-imagem">
+                <img src="./img/piano.jpg">
+                <p><b>Aulas de piano</b></p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting of the
+                    industry. Lorem
+                    Ipsum has been
+                    the and scrambled it.
+                    atype specimen
+                </p>
+            </div>
+            <div class="coluna-3 espaco-texto bloco-imagem">
+                <img src="./img/guitarra.jpg">
+                <p><b>Aprenda a toca guitarra como ninguém</b></p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting of the
+                    industry. Lorem
+                    Ipsum has been
+                    the and scrambled it.
+                    atype specimen
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 6º PARTE DO MEU SITE. -->
+    <!-- Irei por uns ícones de umas marcas, iguais os icones da parte 1 por exemplo. -->
+    <!-- Mesma idéia, pegar a coluna-100 criada lá em cima, e por uma nova classe pra ela,
+         para inserir meus logos dos ícones. E dentro dessa <div ( da coluna-100 com a nova classe)
+         criarei outra <div e pegarei a classe content criada lá em cima, pra poder fazer a nossa
+        <div de conteúdo  -->
+    <div class="coluna-100 bloco-logos">
+        <div class="content">
+            <div class="coluna-4">
+                <!-- Aqui eu defini o nome da minha clase como coluna-4, pq serão 4 colunas aonde irão os meu ícones das minhas imagens de marca. Cada ícone, ficará dentro de 1 coluna.-->
+                <br />
+                <img alt="Dribble" title="dribble" src="img/logo1.png">
+            </div>
+            <div class="coluna-4">
+                <br />
+                <img alt="Leopards Media" title="leopard media" src="img/logo2.png">
+            </div>
+            <div class="coluna-4">
+                <br />
+                <br />
+                <img alt="Behance" title="behance" src="img/logo3.png">
+            </div>
+            <div class="coluna-4">
+
+                <img alt="Puma" title="puma" src="img/logo4.png">
+            </div>
+        </div>
+    </div>
+
+    <!-- 7º PARTE DO MEU SITE  -->
+    <!-- Farei alguns titulos e textos dizendo sobre a empresa, contendo endereço, telefone e algumas informações.
+         Cada informação ficará dentro de uma coluna, assim como feito acima ( nas imagens dos icones ),
+         portanto, utilizaremos o mesmo conceito que utilizamos acima. Pegarei a coluna 100, que já tem o mesmo 
+         tamanho do meu bloco ( bloco é aonde vai ficar o meu conteúdo, meu conteúdo lá no site ) e utilizarei o content também, e após 
+        criarei uma nova classe para essa minha parte, para eu poder colocar meu conteúdo e estilizar no css -->
+
+    <footer>
+        <div class="coluna-100 footer">
+            <div class="content">
+                <div class="coluna-4">
+                    <h3><b>Popular Post</b></h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing</p>
+                    <p class="clock"> 18-April 2020</p>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing</p>
+                    <p class="clock"> 18-April 2020</p>
+
+                </div>
+
+                <div class="coluna-4">
+                    <h3><b>Popular Post</b></h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing.Lorem Ipsum is simply dummy text of the
+                        printing.Lorem Ipsum is simply dummy text of the printing.Lorem Ipsum is simply dummy text of
+                        the printing. </p>
+                </div>
+
+                <div class="coluna-4">
+                    <h3><b>Popular Post</b></h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing.Lorem Ipsum is simply dummy text of
+                        the printing.Lorem Ipsum is simply dummy text of the printing.Lorem Ipsum is simply dummy
+                        text of the printing.Lorem Ipsum is simply dummy text of the printing.Lorem Ipsum is simply
+                        dummy
+                        text of the printing.Lorem Ipsum is simply dummy text of the printing.Lorem Ipsum is simply
+                        dummy text of the printing.</p>
+                </div>
+
+                <div class="coluna-4">
+                    <h3><b>Popular Post</b></h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing.Lorem Ipsum is simply dummy text of
+                        the printing.Lorem Ipsum is simply dummy text of the printing.Lorem Ipsum is simply dummy
+                        text of the printing.Lorem Ipsum is simply dummy text of the printing.Lorem Ipsum is simply.</p>
+                    <p class="location">Kingston-Jamaica</p>
+                    <p class="email">tuffgong@jam.com.br</p>
+                    <p class="telefone">890-555-2697</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 8º PARTE DO MEU SITE -->
+    <!-- FAREI O "MENU FINAL", AONDE FICARÁ À DIREITA O COPYRIGHT E À ESQUERDA 4 ICONES DE REDES SOCIAS ( OS MESMOS ICONES DA MINHA 1º PARTE DO MEU SITE) -->
+    <!-- Para isso farei o mesmo conceito acima, usarei a classe="coluna-100" e acrescentarei um nome que eu defini de "footer2" 
+         e a classe="content" e criarei umas div. -->
+    <div class="coluna-100 footer-2">
+        <div class="content icones-socias">
+            <p>@copyright exampler corporation 2020
+
+                <!-- Abaixo eu criei uma coluna e umas linhas para poder inserir meus icones dentro da minha "classe=icones-sociais" 
+             e estilizar no css.-->
+                <ul>
+                    <li>
+                        <a href="">
+
+                            <img src="./img/instagram.png" </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/face.png" </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/twitter.png" </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/linkeedin.png" </a>
+                    </li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    <!-- Esses arquivos abaixo, fazem parte da 3º parte do meu site*** -->
+    <!-- Abaixo eu estou linkando, estou chamando, os meus arquivos externos que peguei, (arquivos do site que contém os scripts para fazer os slides) no meu arquivo index.html para a nossa pagina -->
+    <!-- Bom, as tags <scripts>, precisam ser colocadas dentro do meu <body>, do nosso corpo.
+                     E porque colocar aqui embaixo no body e não lá em cima no <head>, aonde eu linkei meu arquivo css com html ?
+                     Porque o programa ele lê de cima pra baixo, portanto se eu quero que os slides fiquem abaixo do meu menu, 
+                     eu tenho que fazer no final da codificação do meu menu, dentro do <body>, pra ele seguir uma ordem/padrão de carregamento. 
+                     O ideal é sempre carregar o .css lá em cima e o .js aqui embaixo.
+                     Porque o css ele vai carregar, depois ele vai estilizar todas as minhas tags ( o meu conteudo ) 
+                     e só depois a gente precisa que o JavaScript manipule as tags que já foram carregadas. -->
+
+
+    <!-- Colocando as tags <script> dos meus slides e chamando os scripts de js no meu arquivo index.html para a nossa pagina-->
+    <!-- OS arquivos abaixo são todos arquivos externos, não são arquivos do meu notebook**-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+
+    <!-- Após isso, eu vou no meu arquivo main.js e vou começar a estilizar meu slider ( No caso aqui, estilizei no main.css ). -->
+
+    <!-- Pra eu começar a estilizar minha quarte parte do meu site, -->
+</body>
+
+</html>
