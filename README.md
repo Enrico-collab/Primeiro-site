@@ -4,6 +4,8 @@ Nesse projeto eu tive a minha primeira experiência no desenvolvimento web. Util
 
 Link para visualização: https://estudio-musical.netlify.app
 
+# Music Studio Website
+
 In this project I had my first experience in web development. Using HTML, CSS and JS, I created a basic, non-responsive index.html page with information about recordings, rehearsals, videos and classes.
 
 Link to view: https://estudio-musical.netlify.app
